@@ -1,0 +1,145 @@
+Marcos Raúl Gatica - 1R3 - Informática 1
+TP3
+
+1. Convierta el binario 110011010010 en octal y en hexadecimal.
+
+Binario -> Octal
+
+010 = 2
+010 = 2
+011 = 3
+110 = 6
+
+Rta: 6322(8)
+
+Binario -> Hexadecimal
+
+0010 = 2
+1101 = D
+1100 = C
+
+Rta: 0xCD2
+
+2. Convierta 0xCAFE hexadecimales a octal.
+
+E = 1110
+F = 1111
+A = 1010
+C = 1100
+
+1100101011111110
+
+110 = 6
+111 = 7
+011 = 3
+101 = 5
+100 = 4
+001 = 1
+
+Rta: 145376(8)
+
+3. Dado los números signados  de 6 bits p=011000 y q=011000 realizar la suma p+q e indicar el resultado en decimal y binario. Tener en cuenta la cantidad de bits.
+
+p=011000 (positivo)
+q=011000 (positivo)
+
+11
+011000
+011000
+----------
+110000
+
+Rta. (6 bits) = 110000 (2)
+Rta. (decimal) = 16 (10) (considerando que el número es positivo y usando el complemento a 2 que es 010000).
+
+4. Dado los números signados  de 6 bits p=011000 y q=011000 realizar la resta p-q e indicar el resultado en decimal y binario. Tener en cuenta la cantidad de bits.
+
+p=011000 (positivo)
+q=011000 (positivo) => 101000 (negativo - complemento a 2)
+
+ 11
+ 011000
+ 101000
+ ---------
+1000000
+
+Rta. (6 bits) = 000000(2)
+Rta. (decimal) = 0(10)
+
+5. Convierta el número 127,25 de decimal a formato IEEE754, indicando los pasos utilizados para calcular:
+
+a. bit de signo: el número 127,25 es positivo => 0
+b. bits de mantisa: 
+
+127/2
+   1 63/2
+       1  31/2
+            1  15/2
+                 1  7/2
+                     1  3/2
+                         1  1
+= 1111111
+
+0,25 .2 = 0,5
+0,5 .2   = 1
+0.01 
+= 01 (binario después del punto)
+
+127,25 = 1111111.01 = 1.11111101 (normalizado)
+
+c. bits de exponente:
+
+El punto se movió 6 lugares => el exponente es 6
+El exponente en exceso es 133 (127+6)
+
+133/2
+    1  66/2
+          0  33/2
+               1  16/2
+                     0  8/2
+                         0  4/2
+                             0  2/2
+                                 0  1
+         
+133 = 10000101
+
+127,25 = 01000010111111101000000000000000 (simple presición IEEE754)
+
+6. Realizar la suma p+r, donde p=15(decimal) y r=0xFF(hexadecimal). Considerar ambos como números signados de 8 bits. Expresar el resultado en decimal y binario. Tener en cuenta la cantidad de bits.
+
+p = 15 = 00001111 (+)
+
+15/2
+  1 7/2
+     1  3/2
+         1  1
+
+r = 0xFF = 11111111
+
+F = 1111
+F = 1111
+
+      1111
+00001111
+11111111
+------------
+100001110
+
+Rta. (8bits): 00001110(2)
+Rta. (decimal) = 14(10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
